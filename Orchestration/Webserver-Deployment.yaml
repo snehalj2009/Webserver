@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Webserver-deployment
+  labels:
+    app: Webserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Webserver
+  template:
+    metadata:
+      labels:
+        app: Webserver
+    spec:
+      containers:
+      - name: Webserver
+        image: docker.io/snehalj/Webserver:v1
