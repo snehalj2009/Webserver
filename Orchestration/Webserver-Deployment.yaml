@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Webserver-deployment
+  name: webserver-deployment
   labels:
     app: Webserver
 spec:
@@ -15,5 +15,5 @@ spec:
         app: Webserver
     spec:
       containers:
-      - name: Webserver
-        image: docker.io/snehalj/Webserver:v1
+      - name: webserver
+        image: docker.io/snehalj/webserver:v1
